@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load comments %}
+{% get_comment_count for object as comment_count %}
+
+<div>
+  <a href="{% url boring.entry_list" %}">All entries</a>
+</div>
+
+{% block content %}
+
+<h2>{{ object.title}}</h2>
+
+<div>
+By {{ object.author }}
+</div>
+
+<div>
+{{ object.body }}
+</div>
+
+<div class="comments">
+<h4>{{ comment_count|default:"0" }} comments</h4>
+
+{% render_comment_list for object %}
+
+<h4 class="comment-form-title">Add a comment:</h4>
+
+{% render_comment_form for object %}
+
+</div>
+
+{% endblock content %}

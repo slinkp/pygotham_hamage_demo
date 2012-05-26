@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>Entries</h2>
+    <ul class="entry">
+    {% for entry in object_list %}
+       <li><a href="{% url boring.entry_detail pk=entry.id %}">{{ entry.title }}</a></li>
+    {% endfor %}
+    </ul>
+
+{% endblock content %}

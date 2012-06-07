@@ -18,7 +18,6 @@ class EntryModerator(CommentModerator):
         from hamage.backends.django_hamage.models import DjangoFilterGraph
         from hamage.backends.django_hamage.models import RejectContent
         graph = DjangoFilterGraph()
-        import pdb; pdb.set_trace()
         if comment.user_name:
             author = comment.user_name
         elif comment.user:

@@ -20,8 +20,17 @@ from hamage.middleware import HamageMiddleware
 hamage_config = {
     'options': {
         'min_karma': 1,
-        }
+        'path_configs': [
+            {
+                # Which paths trigger this handler.
+                'path': '/comments/post/',
+                # Form field above which to inject error msg.
+                'error_field': 'comment',
+                # Form field providing author name.
+                'author_field': 'name',
+             }],
     }
+}
 
 application = HamageMiddleware(application, hamage_config)
 

@@ -3,7 +3,7 @@ import sys, os
 
 version = '0.0'
 
-setup(name='spamtests',
+setup(name='django_hamage_demo',
       version=version,
       description="Scratch django project for testing spam control strategies",
       long_description="""\

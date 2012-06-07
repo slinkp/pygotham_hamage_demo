@@ -1,4 +1,4 @@
-# Django settings for spamtests project.
+# Django settings for django_hamage_demo project.
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -100,10 +100,10 @@ MIDDLEWARE_CLASSES = (
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'spamtests.urls'
+ROOT_URLCONF = 'django_hamage_demo.urls'
 
 # Python dotted path to the WSGI application used by Django's runserver.
-WSGI_APPLICATION = 'spamtests.wsgi.application'
+WSGI_APPLICATION = 'django_hamage_demo.wsgi.application'
 
 TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".

@@ -8,8 +8,8 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 urlpatterns = patterns('',
     # Examples:
-    # url(r'^$', 'spamtests.views.home', name='home'),
-    # url(r'^spamtests/', include('spamtests.foo.urls')),
+    # url(r'^$', 'django_hamage_demo.views.home', name='home'),
+    # url(r'^django_hamage_demo/', include('django_hamage_demo.foo.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),

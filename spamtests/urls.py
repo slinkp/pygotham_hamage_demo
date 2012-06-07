@@ -4,6 +4,8 @@ from django.conf.urls import patterns, include, url
 from django.contrib import admin
 admin.autodiscover()
 
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+
 urlpatterns = patterns('',
     # Examples:
     # url(r'^$', 'spamtests.views.home', name='home'),
@@ -17,4 +19,5 @@ urlpatterns = patterns('',
     url(r'^comments/', include('django.contrib.comments.urls')),
     url(r'^boring/', include('boring.urls')),
 
-)
+) + staticfiles_urlpatterns()
+

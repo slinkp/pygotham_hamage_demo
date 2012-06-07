@@ -6,8 +6,15 @@ os.environ.setdefault("DJANGO_SETTINGS_MODULE", "spamtests.settings")
 
 # This application object is used by the development server
 # as well as any WSGI server configured to use this file.
-from django.core.wsgi import get_wsgi_application
-application = get_wsgi_application()
+# from django.core.wsgi import get_wsgi_application
+# application = get_wsgi_application()
+
+# Use twod.wsgi to get webob-compatible requests in Django.
+# Downside: it has a hard dependency on old 0.9.x versions of webob.
+# http://packages.python.org/twod.wsgi/manual/request-objects.html
+
+from twod.wsgi import DjangoApplication
+application = DjangoApplication()
 
 from hamage.middleware import HamageMiddleware
 hamage_config = {

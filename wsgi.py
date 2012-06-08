@@ -19,7 +19,7 @@ application = DjangoApplication()
 from hamage.middleware import HamageMiddleware
 hamage_config = {
     'options': {
-        'min_karma': 1,
+        'min_karma': 0,
         'path_configs': [
             {
                 # Which paths trigger this handler.
@@ -29,8 +29,15 @@ hamage_config = {
                 # Form field providing author name.
                 'author_field': 'name',
              }],
-    }
-}
+        'backend_factory': 'django_orm',
+    },
+    # Which filters to run, in order. Given as entry point names.
+    # Must be in the 'hamage_filters' group.
+   'filters': [
+       'hamage_extlinks',
+       ],
+   
+ }
 
 application = HamageMiddleware(application, hamage_config)
 

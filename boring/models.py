@@ -15,9 +15,9 @@ class Entry(models.Model):
 class EntryModerator(CommentModerator):
 
     def allow(self, comment, content_object, request):
-        from hamage.backends.django_hamage.models import DjangoFilterGraph
+        from hamage.backends.django_hamage.models import DjangoFilterSystem
         from hamage.backends.django_hamage.models import RejectContent
-        graph = DjangoFilterGraph()
+        filtersys = DjangoFilterSystem()
         if comment.user_name:
             author = comment.user_name
         elif comment.user:
@@ -32,7 +32,7 @@ class EntryModerator(CommentModerator):
                    (u'', comment.email),
                    ]
         try:
-            graph.test(request, author, changes)
+            filtersys.test(request, author, changes)
             return True
         except RejectContent:
             return False

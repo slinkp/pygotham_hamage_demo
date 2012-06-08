@@ -160,9 +160,13 @@ LOGGING = {
 # EXPERIMENTAL
 HAMAGE_CONFIG = {
     'options': {
-        'min_karma': 2,
+        'min_karma': 0,
         'logging_enabled': True,
-        'backend_factory': 'django_orm',
         },
     'filters': ['hamage_extlinks'],
     }
+
+
+
+
+

@@ -41,6 +41,11 @@ hamage_config = {
 
 application = HamageMiddleware(application, hamage_config)
 
+import logging
+logging.basicConfig(level=logging.INFO)
+logging.getLogger().setLevel(logging.INFO)
+logging.getLogger('hamage.filter').setLevel(logging.INFO)
+
 from wsgiref.simple_server import make_server
 port = 8000
 server = make_server('', port, application)

@@ -19,6 +19,9 @@ setup(name='django_hamage_demo',
       zip_safe=False,
       install_requires=[
           # -*- Extra requirements: -*-
+          'django>=1.3',
+          # 'hamage',
+          'twod.wsgi',
       ],
       entry_points="""
       # -*- Entry points: -*-

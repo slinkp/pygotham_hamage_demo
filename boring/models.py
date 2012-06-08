@@ -11,8 +11,16 @@ class Entry(models.Model):
     body = models.TextField()
 
 
-# Wire up django.contrib.comments moderation.
 class EntryModerator(CommentModerator):
+
+    """Wire up django.contrib.comments moderation
+    to a particular model.
+
+    This is not a particularly good idea, because if allow() returns False
+    (don't allow the object), Django gives the user a not very useful
+    'security has been tampered with' message, and you apparently have
+    no influence over what it says.
+    """
 
     def allow(self, comment, content_object, request):
         from hamage.backends.django_hamage.models import DjangoFilterSystem

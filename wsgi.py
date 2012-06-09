@@ -25,7 +25,7 @@ hamage_config = {
                 # Which paths trigger this handler.
                 'path': '/comments/post/',
                 # Form field above which to inject error msg.
-                'error_field': 'comment',
+                'error_field': 'name',
                 # Form field providing author name.
                 'author_field': 'name',
              }],

@@ -1,6 +1,46 @@
 <html>
+<head>
+<title>Django HamageControl demo, PyGotham II, June 2012</title>
+
+<style type="text/css">
+
+.error-message {
+   color: #AA0000;
+   display: inline-block;
+   background-color: #FFFF66;
+   margin: 10px;
+   border: 1px solid #AA0000;
+   padding: 0 1em;
+}
+
+body {
+   background-color: #AAAAEE;
+}
+
+label {
+   width: 100px;
+   display: inline-block;
+   overflow: wrap;
+   text-align: right;
+}
+
+.main-content {
+   width: 600px;
+   background-color: #DDDDFF;
+   border: 1px solid #AAAAAA;
+   padding: 10px;
+   margin: 30px;
+   -moz-border-radius: 10px;
+   border-radius: 10px;
+}
+
+</style>
+
+</head>
 <body>
+<div class="main-content">
 {% block content %}
 {% endblock content %}
+</div>
 </body>
 </html>

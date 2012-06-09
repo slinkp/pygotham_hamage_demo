@@ -45,4 +45,4 @@ class EntryModerator(CommentModerator):
         except RejectContent:
             return False
 
-moderator.register(Entry, EntryModerator)
+#moderator.register(Entry, EntryModerator)

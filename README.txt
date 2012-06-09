@@ -13,7 +13,7 @@ Then you can run django under wsgi like:
 Edit the wsgi file to play with the hamage configuration.
 
 There is also a slide deck about the project in openoffice/libreoffice
-format, slides.odp.
+format, https://github.com/slinkp/pygotham_hamage_demo/blob/master/pygotham2_hamage_slides.odp?raw=true
 
 
 
